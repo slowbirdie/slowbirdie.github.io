@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 编程 , SQL ">
   <meta name="description" content="SQL编程语法 | 笨鸟博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="SQL 编程语法速查手册 简洁记录常用 SQL 语法，便于快速回顾与查阅。   1. 基础查询SELECT12SELECT 列1, 列2 FROM 表名;SELECT * FROM 表名;   -- 所有列  DISTINCT1SELECT DISTINCT 列名 FROM 表名;   -- 去重查询  WHERE 子句1SELECT * FROM 表名 WHERE 条件;     运算符 含义">
+<meta name="description" content="SQL 编程语法速查手册 简洁记录常用 SQL 语法,便于快速回顾与查阅。   1. 基础查询SELECT12SELECT 列1, 列2 FROM 表名;SELECT * FROM 表名;   -- 所有列  DISTINCT1SELECT DISTINCT 列名 FROM 表名;   -- 去重查询  WHERE 子句1SELECT * FROM 表名 WHERE 条件;     运算符 含义">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL编程语法">
 <meta property="og:url" content="https://slowbirdie.top/2026/03/12/SQL%E7%BC%96%E7%A8%8B%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="笨鸟博客">
-<meta property="og:description" content="SQL 编程语法速查手册 简洁记录常用 SQL 语法，便于快速回顾与查阅。   1. 基础查询SELECT12SELECT 列1, 列2 FROM 表名;SELECT * FROM 表名;   -- 所有列  DISTINCT1SELECT DISTINCT 列名 FROM 表名;   -- 去重查询  WHERE 子句1SELECT * FROM 表名 WHERE 条件;     运算符 含义">
+<meta property="og:description" content="SQL 编程语法速查手册 简洁记录常用 SQL 语法,便于快速回顾与查阅。   1. 基础查询SELECT12SELECT 列1, 列2 FROM 表名;SELECT * FROM 表名;   -- 所有列  DISTINCT1SELECT DISTINCT 列名 FROM 表名;   -- 去重查询  WHERE 子句1SELECT * FROM 表名 WHERE 条件;     运算符 含义">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-03-12T10:59:33.774Z">
-<meta property="article:modified_time" content="2026-03-12T11:15:17.481Z">
+<meta property="article:modified_time" content="2026-03-13T06:42:32.926Z">
 <meta property="article:author" content="笨鸟">
 <meta property="article:tag" content="SQL">
 <meta property="article:tag" content="编程">
@@ -268,7 +268,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-03-12 19:15:17'>2026-03-12 18:59</time>
+            发布时间 : <time class="date" title='最后更新: 2026-03-13 14:42:32'>2026-03-12 18:59</time>
         
     </div>
     <div class="article-meta">
@@ -307,7 +307,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="SQL-编程语法速查手册"><a href="#SQL-编程语法速查手册" class="headerlink" title="SQL 编程语法速查手册"></a>SQL 编程语法速查手册</h1><blockquote>
-<p>简洁记录常用 SQL 语法，便于快速回顾与查阅。</p>
+<p>简洁记录常用 SQL 语法,便于快速回顾与查阅。</p>
 </blockquote>
 <hr>
 <h2 id="1-基础查询"><a href="#1-基础查询" class="headerlink" title="1. 基础查询"></a>1. 基础查询</h2><h3 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列<span class="number">1</span>, 列<span class="number">2</span> <span class="keyword">FROM</span> 表名;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名;   <span class="comment">-- 所有列</span></span><br></pre></td></tr></table></figure>
@@ -403,7 +403,7 @@
 
 <h3 id="别名-AS"><a href="#别名-AS" class="headerlink" title="别名 AS"></a>别名 AS</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">AS</span> 别名 <span class="keyword">FROM</span> 表名 <span class="keyword">AS</span> 别名;</span><br></pre></td></tr></table></figure>
 
-<h3 id="ORDER-BY-排序"><a href="#ORDER-BY-排序" class="headerlink" title="ORDER BY 排序"></a>ORDER BY 排序</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 列<span class="number">1</span> <span class="keyword">ASC</span>, 列<span class="number">2</span> <span class="keyword">DESC</span>;   <span class="comment">-- ASC 升序（默认），DESC 降序</span></span><br></pre></td></tr></table></figure>
+<h3 id="ORDER-BY-排序"><a href="#ORDER-BY-排序" class="headerlink" title="ORDER BY 排序"></a>ORDER BY 排序</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 列<span class="number">1</span> <span class="keyword">ASC</span>, 列<span class="number">2</span> <span class="keyword">DESC</span>;   <span class="comment">-- ASC 升序（默认）,DESC 降序</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="LIMIT-TOP"><a href="#LIMIT-TOP" class="headerlink" title="LIMIT &#x2F; TOP"></a>LIMIT &#x2F; TOP</h3><ul>
 <li><strong>MySQL &#x2F; PostgreSQL &#x2F; SQLite</strong>：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 LIMIT 数字;               <span class="comment">-- 返回前 N 行</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 LIMIT 偏移量, 数量;        <span class="comment">-- 分页查询</span></span><br></pre></td></tr></table></figure></li>
@@ -442,7 +442,7 @@
 </tr>
 <tr>
 <td><code>FOREIGN KEY</code></td>
-<td>外键，引用另一表的主键</td>
+<td>外键,引用另一表的主键</td>
 </tr>
 <tr>
 <td><code>CHECK</code></td>
@@ -462,9 +462,9 @@
 <h3 id="ALTER-修改表结构"><a href="#ALTER-修改表结构" class="headerlink" title="ALTER 修改表结构"></a>ALTER 修改表结构</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER TABLE</span> 表名 <span class="keyword">ADD</span> 列名 数据类型;               <span class="comment">-- 添加列</span></span><br><span class="line"><span class="keyword">ALTER TABLE</span> 表名 <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> 列名;                <span class="comment">-- 删除列</span></span><br><span class="line"><span class="keyword">ALTER TABLE</span> 表名 <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> 列名 新数据类型;     <span class="comment">-- 修改列类型 (SQL Server)</span></span><br><span class="line"><span class="keyword">ALTER TABLE</span> 表名 MODIFY <span class="keyword">COLUMN</span> 列名 新数据类型;    <span class="comment">-- MySQL</span></span><br><span class="line"><span class="keyword">ALTER TABLE</span> 表名 RENAME <span class="keyword">COLUMN</span> 旧名 <span class="keyword">TO</span> 新名;       <span class="comment">-- 重命名列 (部分数据库)</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="4-连接与集合"><a href="#4-连接与集合" class="headerlink" title="4. 连接与集合"></a>4. 连接与集合</h2><h3 id="JOIN-连接"><a href="#JOIN-连接" class="headerlink" title="JOIN 连接"></a>JOIN 连接</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- INNER JOIN：两表匹配的行</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- LEFT JOIN：左表所有行 + 右表匹配行，无匹配则为 NULL</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- RIGHT JOIN：右表所有行 + 左表匹配行</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- FULL JOIN：两表所有行，不匹配处为 NULL (MySQL 不支持，可用 UNION 模拟)</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">FULL</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br></pre></td></tr></table></figure>
+<h2 id="4-连接与集合"><a href="#4-连接与集合" class="headerlink" title="4. 连接与集合"></a>4. 连接与集合</h2><h3 id="JOIN-连接"><a href="#JOIN-连接" class="headerlink" title="JOIN 连接"></a>JOIN 连接</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- INNER JOIN：两表匹配的行</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- LEFT JOIN：左表所有行 + 右表匹配行,无匹配则为 NULL</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- RIGHT JOIN：右表所有行 + 左表匹配行</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- FULL JOIN：两表所有行,不匹配处为 NULL (MySQL 不支持,可用 UNION 模拟)</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">FULL</span> <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 表<span class="number">1.</span>列 <span class="operator">=</span> 表<span class="number">2.</span>列;</span><br></pre></td></tr></table></figure>
 
-<h3 id="UNION-UNION-ALL"><a href="#UNION-UNION-ALL" class="headerlink" title="UNION &#x2F; UNION ALL"></a>UNION &#x2F; UNION ALL</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span>           <span class="comment">-- 合并结果，去重</span></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span>       <span class="comment">-- 合并结果，不去重</span></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="UNION-UNION-ALL"><a href="#UNION-UNION-ALL" class="headerlink" title="UNION &#x2F; UNION ALL"></a>UNION &#x2F; UNION ALL</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span>           <span class="comment">-- 合并结果,去重</span></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">1</span></span><br><span class="line"><span class="keyword">UNION</span> <span class="keyword">ALL</span>       <span class="comment">-- 合并结果,不去重</span></span><br><span class="line"><span class="keyword">SELECT</span> 列 <span class="keyword">FROM</span> 表<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="5-函数"><a href="#5-函数" class="headerlink" title="5. 函数"></a>5. 函数</h2><h3 id="聚合函数"><a href="#聚合函数" class="headerlink" title="聚合函数"></a>聚合函数</h3><table>
@@ -528,7 +528,7 @@
 </tr>
 <tr>
 <td><code>FORMAT(列, 格式)</code></td>
-<td>格式化 (日期&#x2F;数值，不同数据库语法不同)</td>
+<td>格式化 (日期&#x2F;数值,不同数据库语法不同)</td>
 </tr>
 </tbody></table>
 <h3 id="数值函数"><a href="#数值函数" class="headerlink" title="数值函数"></a>数值函数</h3><table>
@@ -559,14 +559,14 @@
 <td>提取日期部分</td>
 </tr>
 <tr>
-<td>其他数据库差异大，使用时查阅对应文档</td>
+<td>其他数据库差异大,使用时查阅对应文档</td>
 <td></td>
 </tr>
 </tbody></table>
 <hr>
 <h2 id="6-分组与筛选"><a href="#6-分组与筛选" class="headerlink" title="6. 分组与筛选"></a>6. 分组与筛选</h2><h3 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列, 聚合函数 <span class="keyword">FROM</span> 表名 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 列;</span><br></pre></td></tr></table></figure>
 
-<h3 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列, 聚合函数 <span class="keyword">FROM</span> 表名 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 列 <span class="keyword">HAVING</span> 条件;</span><br><span class="line"><span class="comment">-- 与 WHERE 区别：WHERE 过滤行，HAVING 过滤分组</span></span><br></pre></td></tr></table></figure>
+<h3 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列, 聚合函数 <span class="keyword">FROM</span> 表名 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 列 <span class="keyword">HAVING</span> 条件;</span><br><span class="line"><span class="comment">-- 与 WHERE 区别：WHERE 过滤行,HAVING 过滤分组</span></span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="7-索引"><a href="#7-索引" class="headerlink" title="7. 索引"></a>7. 索引</h2><h3 id="CREATE-INDEX"><a href="#CREATE-INDEX" class="headerlink" title="CREATE INDEX"></a>CREATE INDEX</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> INDEX 索引名 <span class="keyword">ON</span> 表名 (列<span class="number">1</span>, 列<span class="number">2</span>);        <span class="comment">-- 普通索引</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX 索引名 <span class="keyword">ON</span> 表名 (列);       <span class="comment">-- 唯一索引</span></span><br></pre></td></tr></table></figure>
@@ -583,7 +583,7 @@
 
 <hr>
 <blockquote>
-<p><strong>提示</strong>：不同数据库（MySQL、SQL Server、PostgreSQL、SQLite）语法细节可能略有差异，实际使用时请根据具体环境微调。 </p>
+<p><strong>提示</strong>：不同数据库（MySQL、SQL Server、PostgreSQL、SQLite）语法细节可能略有差异,实际使用时请根据具体环境微调。 </p>
 </blockquote>
 
       
