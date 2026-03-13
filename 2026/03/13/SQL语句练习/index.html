@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | 笨鸟博客</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="Hello World | 笨鸟博客">
+  <title>SQL语句练习 | 笨鸟博客</title>
+  <meta name="keywords" content=" SQL , 练习 ">
+  <meta name="description" content="SQL语句练习 | 笨鸟博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="查询a表中男生所有的信息 select 学号,姓名,性别,出生日期,专业成绩 from a where 性别&#x3D;”男’’; 或 select * from a where 性别&#x3D;’’男’’; 查询a表中男生的姓名和专业成绩 select 姓名,专业成绩 from a where 性别&#x3D;’’男’’; 查询a表中男生的所有信息并按专业成绩升序排序 select * from">
 <meta property="og:type" content="article">
@@ -250,19 +250,38 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-SQL语句练习" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">SQL语句练习</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="数据库">数据库</a> > 
+            
+            <a  data-rel="数据库&lt;---&gt;SQL">SQL</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">SQL</a>
+            
+            <a class="color3">练习</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-03-12 18:48:03'>2026-03-12 18:48</time>
+            发布时间 : <time class="date" title='最后更新: 2026-03-14 00:07:07'>2026-03-13 15:30</time>
         
     </div>
     <div class="article-meta">
@@ -284,7 +303,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -300,19 +319,102 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+        <p>查询a表中男生所有的信息</p>
+<p>select 学号,姓名,性别,出生日期,专业成绩 from a where 性别&#x3D;”男’’;</p>
+<p>或</p>
+<p>select * from a where 性别&#x3D;’’男’’;</p>
+<p>查询a表中男生的姓名和专业成绩</p>
+<p>select 姓名,专业成绩 from a where 性别&#x3D;’’男’’;</p>
+<p>查询a表中男生的所有信息并按专业成绩升序排序</p>
+<p>select * from a where 性别&#x3D;’’男’’ order by 专业成绩;</p>
+<p>查询a表中男生的姓名和专业成绩,并将查询结果输出到“男生成绩”表</p>
+<p>select 性别,专业成绩 into 男生成绩 from a where 性别&#x3D;’’男”;</p>
+<p>按性别统计性别的平均专业成绩</p>
+<p>select 性别,avg(专业成绩) as 平均专业成绩 from a group by 性别;</p>
+<p>统计男生的平均专业成绩</p>
+<p>select 性别,avg(专业成绩) as 平均专业成绩 from a group by 性别 having 性别&#x3D;’’男’’;</p>
+<p>将a表中学号为“20170105”的学生姓名更改为“孙韬”</p>
+<p>update a set 姓名&#x3D;”孙韬’’ where 学号&#x3D;’’20170105’’;</p>
+<p>在a表中插入一条记录：学号：20170106 性别：女 出生日期：2000&#x2F;09&#x2F;13 专业成绩：95</p>
+<p>insert into a (学号,姓名,性别,出生日期,专业成绩) values(‘’20170106’’,’’刘芸’’,女,#2000&#x2F;9&#x2F;13#,95);</p>
+<p>或</p>
+<p>Insert into a values(‘’20170106’’,’’刘芸’’,女,#2000&#x2F;9&#x2F;13#,95);</p>
+<p>删除a表中学号为“20170101”的记录</p>
+<p>drop from a where 学号&#x3D;’’20170101’’;</p>
+<p>查询被一个学生选修的课程有几个?（count）</p>
+<p>select count(Cno) from SC where Sno&#x3D;’…’;</p>
+<p>查询姓名为张三的学生的选修课程有多少?</p>
+<p>select count(Cno) from SC,S where Sname&#x3D;’张三’ and SC.Sno&#x3D;S.Sno;</p>
+<p>或</p>
+<p>select count(Cno) from SC where Sno in (select Sno from S where Sname&#x3D;’张三’);</p>
+<p>查询年龄在18~19之间的学生信息（between）</p>
+<p>select * from S where  age between 18 and 19;</p>
+<p>查询姓刘的同学的信息（like）</p>
+<p>select * from S where Sname like ‘刘%’;</p>
+<p>查询姓刘且姓名仅仅两字的信息</p>
+<p>select * from S where Sname like ‘刘_’;</p>
+<p>查询没有先修课的课程信息（is null）</p>
+<p>select * from C where Cpno is null;</p>
+<p>求各门课学生的平均成绩,显示课程号及相应的平均成绩（avg,group by）</p>
+<p>select Cno,avg(grade) from SC group by Cno;</p>
+<p>查询有2个以上学生选修的课程的课程号（having）</p>
+<p>select Cno from SC group by Cno having count(Sno)&gt;2;</p>
+<p>查询学生选修课程的情况,要求显示学生名,课程名,成绩（三表查询）</p>
+<p>select Sname,Cname,grade from S,C,SC where S.Sno&#x3D;SC.Sno and C.Cno&#x3D;SC.Cno;</p>
+<p>查询选修了全部课程的学生姓名</p>
+<p>select Sname from S where not exists(select  from C where not exists(select * from SC where S.Sno&#x3D;SC.Sno and C.Cno&#x3D;SC.Cno));</p>
+<p>或</p>
+<p>select Sname from S join SC on S.Sno &#x3D; SC.Sno group by S.Sno, Sname having count(distinc Cno) &#x3D; (select count(*) from C);</p>
+<p>或</p>
+<p>select Sname from S where Sno &#x3D; all(select Sno from SC where SC.Cno &#x3D; C.Cno);</p>
+<p>创建dptg_age,包括两个字段：系别和平均年龄。按系分组求平均年龄,把系名和平均年龄</p>
+<p>存入新表中,一步完成。</p>
+<p>create table dept_age as select department as 系别,avg(age) as 平均年龄 from student group by department；</p>
+<p>将女生的年龄减去1岁</p>
+<p>update student set age &#x3D; age − 1 where sex &#x3D; ‘女’;</p>
+<p>将信息科学系的全体学生成绩设为100分</p>
+<p>update SC set grade &#x3D; 100 where Sno in (select Sno from student where dept &#x3D; ‘信息科学系’)</p>
+<p>删除200215121学生的选课信息</p>
+<p>delete from SC where Sno &#x3D; ‘200215121’;</p>
+<p>将成绩表中计算机科学系的学生信息删除</p>
+<p>delete from SC where  Sno in (select Sno from Student  where Sdept &#x3D; ‘计算机科学系’);</p>
+<p>建立视图view_grade,内容为学生姓名、课程名、成绩</p>
+<p>create view view_grade as select student.Sname as 学生姓名,source.Cname as 课程名,SC.grade as 成绩 from student join SC on student.Sno &#x3D; SC.Sno join cource on SC.Cno &#x3D; cource.Cno);</p>
+<p>或</p>
+<p>create view view_grade as select student.Sname as 学生姓名,cource.Cname as 课程名,SC.grade as 成绩 from student,cource,sc where student.Sno &#x3D; SC.Sno and cource.Cno &#x3D; SC.Cno;</p>
+<p>查询课程表的所有信息</p>
+<p>SELECT * FROM 课程表;</p>
+<p>查询课程名及其学分</p>
+<p>SELECT 课程名, 学分 FROM 课程表;</p>
+<p>查询学生姓名及其出生年份,出生年份的别名为“出生年份”</p>
+<p>SELECT 姓名, 出生年份 AS 出生年份 FROM 学生表;</p>
+<p>查询被学生选修的课程的课程名</p>
+<p>SELECT DISTINCT 课程名 FROM 课程表 WHERE 课程号 IN (SELECT DISTINCT 课程号 FROM 成绩表);</p>
+<p>查询考试需要补考的学生有几个？(distinct）</p>
+<p>SELECT COUNT(DISTINCT 学号) FROM 成绩表 WHERE 成绩 &lt; 60;</p>
+<p>查询每门课的间接先修课，要求显示课程名及该课程间接先修课的课程名。（三表查询）</p>
+<p>SELECT a.课程名, c.课程名 AS 间接先修课名 FROM 课程表 a LEFT JOIN 课程表 b ON a.先修课号 &#x3D; b.课程号 LEFT JOIN 课程表 c ON b.先修课号 &#x3D; c.课程号 WHERE c.课程名 IS NOT NULL;</p>
+<p>查询成绩在90分以上的女生（复合条件）</p>
+<p>SELECT DISTINCT 学生表.* FROM 学生表 JOIN 成绩表 ON 学生表.学号 &#x3D; 成绩表.学号 WHERE 成绩表.成绩 &gt; 90 AND 学生表.性别 &#x3D; ‘女’;</p>
+<p>查询与王敏在一个系学习的学生 （in）</p>
+<p>SELECT * FROM 学生表 WHERE 系别 &#x3D; (SELECT 系别 FROM 学生表 WHERE 姓名 &#x3D; ‘王敏’) AND 姓名 !&#x3D; ‘王敏’;</p>
+<p>查询其他系中比信息系某一学生年龄大的学生姓名和年龄</p>
+<p>SELECT 姓名, 年龄 FROM 学生表 WHERE 系别 !&#x3D; ‘信息系’ AND 年龄 &gt; ANY (SELECT 年龄 FROM 学生表 WHERE 系别 &#x3D; ‘信息系’);</p>
+<p>查询其他系中比信息系所有学生年龄大的学生姓名和年龄</p>
+<p>SELECT 姓名, 年龄 FROM 学生表 WHERE 系别 !&#x3D; ‘信息系’ AND 年龄 &gt; ALL (SELECT 年龄 FROM 学生表 WHERE 系别 &#x3D; ‘信息系’);</p>
+<p>查询被所有学生选修的课程名</p>
+<p>SELECT 课程名 FROM 课程表 WHERE 课程号 IN (SELECT 课程号 FROM 成绩表 GROUP BY 课程号 HAVING COUNT(DISTINCT 学号) &#x3D; (SELECT COUNT(*) FROM 学生表));</p>
+<p>查询选修了学生95002选修的全部课程的学生学号</p>
+<p>SELECT 学号 FROM 学生表 WHERE 学号 !&#x3D; ‘95002’ AND NOT EXISTS (SELECT 1 FROM 成绩表 c WHERE c.学号 &#x3D; ‘95002’ AND NOT EXISTS (SELECT 1 FROM 成绩表 d WHERE d.学号 &#x3D; 学生表.学号 AND d.课程号 &#x3D; c.课程号));</p>
+<p>查询学生成绩5-7名的学生学号、课程号、成绩</p>
+<p>SELECT 学号, 课程号, 成绩 FROM (SELECT 学号, 课程号, 成绩, ROW_NUMBER() OVER (ORDER BY 成绩 DESC) AS rn FROM 成绩表) t WHERE rn BETWEEN 5 AND 7;</p>
+<p>分别对学生表、成绩表进行：内连接、左外连接、右外连接、全连接</p>
+<p>内连接：SELECT * FROM 学生表 INNER JOIN 成绩表 ON 学生表.学号 &#x3D; 成绩表.学号;</p>
+<p>左外连接：SELECT * FROM 学生表 LEFT JOIN 成绩表 ON 学生表.学号 &#x3D; 成绩表.学号;</p>
+<p>右外连接：SELECT * FROM 学生表 RIGHT JOIN 成绩表 ON 学生表.学号 &#x3D; 成绩表.学号;</p>
+<p>全连接：SELECT * FROM 学生表 FULL OUTER JOIN 成绩表 ON 学生表.学号 &#x3D; 成绩表.学号;</p>
+<p>找出每个学生低于他选修课程平均成绩的课程号</p>
+<p>SELECT 学号, 课程号 FROM 成绩表 a WHERE 成绩 &lt; (SELECT AVG(成绩) FROM 成绩表 b WHERE b.学号 &#x3D; a.学号);</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 3620975785@qq.com </span>
