@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>在线练习 | 笨鸟slie博客</title>
-  <meta name="keywords" content=" 复习 ">
-  <meta name="description" content="在线练习 | 笨鸟slie博客">
+  <title>DES数据加密标准 复习笔记 | 笨鸟slie博客</title>
+  <meta name="keywords" content=" 复习 , DES ">
+  <meta name="description" content="DES数据加密标准 复习笔记 | 笨鸟slie博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="DES 数据加密标准 复习笔记 一、基本属性 密码类别：分组密码 核心结构：Feistel 结构 关键参数 分组长度：64 bit 原始密钥长度：64 bit（含 8 位校验位，实际有效密钥 56 bit） 迭代轮数：16 轮     二、整体加密流程 初始置换 IP：对 64 bit 明文按固定规则重排 16 轮 Feistel 迭代：数据拆分为左右各 32 bit，逐轮执行轮函数运算 左右交换">
 <meta property="og:type" content="article">
@@ -455,9 +455,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-习题巩固" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-DES数据加密标准 复习笔记" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">在线练习</h1>
+        <h1 class="article-title">DES数据加密标准 复习笔记</h1>
     
     <div class="article-meta">
         
@@ -467,7 +467,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="习巩">习巩</a>
+            <a  data-rel="信安">信安</a> > 
+            
+            <a  data-rel="信安&lt;---&gt;密码学">密码学</a>
             
         </span>
         
@@ -477,12 +479,14 @@
             
             <a class="color3">复习</a>
             
+            <a class="color4">DES</a>
+            
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-06-12 11:06:49'>2026-05-17 01:27</time>
+            发布时间 : <time class="date" title='最后更新: 2026-06-13 11:57:35'>2026-06-13 11:56</time>
         
     </div>
     <div class="article-meta">
@@ -504,7 +508,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DES-%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86-%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">DES 数据加密标准 复习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">一、基本属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%B4%E4%BD%93%E5%8A%A0%E5%AF%86%E6%B5%81%E7%A8%8B"><span class="toc-text">二、整体加密流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Feistel-%E8%BD%AE%E8%BF%90%E7%AE%97"><span class="toc-text">三、Feistel 轮运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A0%B8%E5%BF%83%E5%85%AC%E5%BC%8F"><span class="toc-text">1. 核心公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BD%AE%E5%87%BD%E6%95%B0-F-%E6%89%A7%E8%A1%8C%E6%AD%A5%E9%AA%A4"><span class="toc-text">2. 轮函数 F 执行步骤</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AD%90%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%EF%BC%88%E5%AF%86%E9%92%A5%E6%89%A9%E5%B1%95%EF%BC%89"><span class="toc-text">四、子密钥生成（密钥扩展）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%A7%A3%E5%AF%86%E8%A7%84%E5%88%99"><span class="toc-text">五、解密规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%A0%B8%E5%BF%83%E5%B8%B8%E9%87%8F%E5%8F%98%E6%8D%A2%E6%B1%87%E6%80%BB"><span class="toc-text">六、核心常量变换汇总</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -520,14 +524,73 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe 
-  src="https://quiz.slowbirdie.top?embed=true" 
-  width="100%" 
-  height="560" 
-  frameborder="0" 
-  scrolling="no"
-  style="border: none; max-width: 700px; display: block; margin: 20px auto; border-radius: 28px; box-shadow: 0 8px 20px rgba(0,0,0,0.05);">
-</iframe>
+        <h1 id="DES-数据加密标准-复习笔记"><a href="#DES-数据加密标准-复习笔记" class="headerlink" title="DES 数据加密标准 复习笔记"></a>DES 数据加密标准 复习笔记</h1><hr>
+<h2 id="一、基本属性"><a href="#一、基本属性" class="headerlink" title="一、基本属性"></a>一、基本属性</h2><ul>
+<li>密码类别：<strong>分组密码</strong></li>
+<li>核心结构：<strong>Feistel 结构</strong></li>
+<li>关键参数<ul>
+<li>分组长度：64 bit</li>
+<li>原始密钥长度：64 bit（含 8 位校验位，<strong>实际有效密钥 56 bit</strong>）</li>
+<li>迭代轮数：16 轮</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="二、整体加密流程"><a href="#二、整体加密流程" class="headerlink" title="二、整体加密流程"></a>二、整体加密流程</h2><ol>
+<li><strong>初始置换 IP</strong>：对 64 bit 明文按固定规则重排</li>
+<li><strong>16 轮 Feistel 迭代</strong>：数据拆分为左右各 32 bit，逐轮执行轮函数运算</li>
+<li><strong>左右交换</strong>：16 轮结束后互换左右两半数据</li>
+<li><strong>逆初始置换 $\boldsymbol{IP^{-1}}$</strong>：执行 IP 的逆置换，输出 64 bit 密文</li>
+</ol>
+<hr>
+<h2 id="三、Feistel-轮运算"><a href="#三、Feistel-轮运算" class="headerlink" title="三、Feistel 轮运算"></a>三、Feistel 轮运算</h2><h3 id="1-核心公式"><a href="#1-核心公式" class="headerlink" title="1. 核心公式"></a>1. 核心公式</h3><p>$$<br>\begin{align*}<br>L_i &amp;&#x3D; R_{i-1} \<br>R_i &amp;&#x3D; L_{i-1} \oplus F(R_{i-1},\ K_i)<br>\end{align*}<br>$$</p>
+<ul>
+<li>$L_i,R_i$：第 $i$ 轮左、右半部分 32 bit 数据</li>
+<li>$F$：轮函数；$K_i$：第 $i$ 轮 48 bit 子密钥</li>
+</ul>
+<h3 id="2-轮函数-F-执行步骤"><a href="#2-轮函数-F-执行步骤" class="headerlink" title="2. 轮函数 F 执行步骤"></a>2. 轮函数 F 执行步骤</h3><p>输入：32 bit 右半数据 $R_{i-1}$；输出：32 bit 运算结果</p>
+<ol>
+<li><strong>扩展置换（E 表）</strong>：32 bit → 48 bit，匹配子密钥长度，增强扩散性</li>
+<li><strong>异或子密钥</strong>：48 bit 扩展结果与 48 bit 子密钥 $K_i$ 按位异或</li>
+<li><strong>S 盒代换</strong><ul>
+<li>48 bit 分为 8 组，每组 6 bit 对应 1 个 S 盒</li>
+<li>单盒规则：<strong>6 进 4 出</strong>；输入第 1、6 位为行号，第 2~5 位为列号，<strong>按行优先</strong>查表输出 4 bit</li>
+<li>8 盒输出拼接为 32 bit</li>
+</ul>
+</li>
+<li><strong>置换运算（P 表）</strong>：对 32 bit 结果重排，强化扩散效果</li>
+</ol>
+<hr>
+<h2 id="四、子密钥生成（密钥扩展）"><a href="#四、子密钥生成（密钥扩展）" class="headerlink" title="四、子密钥生成（密钥扩展）"></a>四、子密钥生成（密钥扩展）</h2><ol>
+<li><strong>PC-1 置换</strong>：64 bit 原始密钥剔除 8 位校验位，输出 56 bit 有效密钥</li>
+<li><strong>分组移位</strong>：56 bit 拆分为左 $C_0$、右 $D_0$ 各 28 bit；每轮按规则执行<strong>左循环移位</strong></li>
+<li><strong>PC-2 置换</strong>：移位后的 56 bit 压缩置换为 48 bit，得到当前轮子密钥 $K_i$</li>
+<li>16 轮共生成 16 个子密钥 $K_1 \sim K_{16}$</li>
+</ol>
+<hr>
+<h2 id="五、解密规则"><a href="#五、解密规则" class="headerlink" title="五、解密规则"></a>五、解密规则</h2><p>解密算法与加密<strong>完全一致</strong>，仅需将 16 轮子密钥<strong>逆序使用</strong>（第 1 轮用 $K_{16}$，最后一轮用 $K_1$），是 Feistel 结构的核心优势。</p>
+<hr>
+<h2 id="六、核心常量变换汇总"><a href="#六、核心常量变换汇总" class="headerlink" title="六、核心常量变换汇总"></a>六、核心常量变换汇总</h2><table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">变换名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">明文置换</td>
+<td align="left">初始置换 IP、逆初始置换 $IP^{-1}$</td>
+</tr>
+<tr>
+<td align="left">轮函数变换</td>
+<td align="left">扩展 E 表、S 盒代换、置换 P 表</td>
+</tr>
+<tr>
+<td align="left">密钥扩展变换</td>
+<td align="left">置换选择 PC-1、置换选择 PC-2、左循环移位位数表</td>
+</tr>
+</tbody></table>
+
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 slowbirdie.top@outlook.com </span>
     </div>
@@ -539,6 +602,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
