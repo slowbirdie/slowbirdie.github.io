@@ -6,15 +6,15 @@
   <meta name="keywords" content=" 复习 , DES ">
   <meta name="description" content="DES数据加密标准 复习笔记 | 笨鸟slie博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="DES 数据加密标准 复习笔记 一、基本属性 密码类别：分组密码 核心结构：Feistel 结构 关键参数 分组长度：64 bit 原始密钥长度：64 bit（含 8 位校验位，实际有效密钥 56 bit） 迭代轮数：16 轮     二、整体加密流程 初始置换 IP：对 64 bit 明文按固定规则重排 16 轮 Feistel 迭代：数据拆分为左右各 32 bit，逐轮执行轮函数运算 左右交换">
+<meta name="description" content="DES 数据加密标准 复习笔记 一、基本属性 密码类别：分组密码 核心结构：Feistel 结构 关键参数 分组长度：64 bit 原始密钥长度：64 bit（含 8 位校验位，实际有效密钥 56 bit） 迭代轮数：16 轮     二、整体加密流程 初始置换 IP：对 64 bit 明文按固定规则重排  16 轮 Feistel 迭代：数据拆分为左右各 32 bit，逐轮执行轮函数运算  左右">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DES数据加密标准 复习笔记">
 <meta property="og:url" content="https://slowbirdie.top/2026/06/13/DES%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86%E6%A0%87%E5%87%86%20%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="笨鸟slie博客">
-<meta property="og:description" content="DES 数据加密标准 复习笔记 一、基本属性 密码类别：分组密码 核心结构：Feistel 结构 关键参数 分组长度：64 bit 原始密钥长度：64 bit（含 8 位校验位，实际有效密钥 56 bit） 迭代轮数：16 轮     二、整体加密流程 初始置换 IP：对 64 bit 明文按固定规则重排 16 轮 Feistel 迭代：数据拆分为左右各 32 bit，逐轮执行轮函数运算 左右交换">
+<meta property="og:description" content="DES 数据加密标准 复习笔记 一、基本属性 密码类别：分组密码 核心结构：Feistel 结构 关键参数 分组长度：64 bit 原始密钥长度：64 bit（含 8 位校验位，实际有效密钥 56 bit） 迭代轮数：16 轮     二、整体加密流程 初始置换 IP：对 64 bit 明文按固定规则重排  16 轮 Feistel 迭代：数据拆分为左右各 32 bit，逐轮执行轮函数运算  左右">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-06-13T03:56:10.042Z">
-<meta property="article:modified_time" content="2026-06-13T03:57:35.768Z">
+<meta property="article:modified_time" content="2026-06-13T04:36:30.969Z">
 <meta property="article:author" content="笨鸟slie">
 <meta property="article:tag" content="DES">
 <meta property="article:tag" content="复习">
@@ -486,7 +486,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2026-06-13 11:57:35'>2026-06-13 11:56</time>
+            发布时间 : <time class="date" title='最后更新: 2026-06-13 12:36:30'>2026-06-13 11:56</time>
         
     </div>
     <div class="article-meta">
@@ -537,11 +537,20 @@
 </ul>
 <hr>
 <h2 id="二、整体加密流程"><a href="#二、整体加密流程" class="headerlink" title="二、整体加密流程"></a>二、整体加密流程</h2><ol>
-<li><strong>初始置换 IP</strong>：对 64 bit 明文按固定规则重排</li>
-<li><strong>16 轮 Feistel 迭代</strong>：数据拆分为左右各 32 bit，逐轮执行轮函数运算</li>
-<li><strong>左右交换</strong>：16 轮结束后互换左右两半数据</li>
-<li><strong>逆初始置换 $\boldsymbol{IP^{-1}}$</strong>：执行 IP 的逆置换，输出 64 bit 密文</li>
+<li><p><strong>初始置换 IP</strong>：对 64 bit 明文按固定规则重排</p>
+</li>
+<li><p><strong>16 轮 Feistel 迭代</strong>：数据拆分为左右各 32 bit，逐轮执行轮函数运算</p>
+</li>
+<li><p><strong>左右交换</strong>：16 轮结束后互换左右两半数据</p>
+</li>
+<li><p><strong>逆初始置换 $\boldsymbol{IP^{-1}}$</strong>：执行 IP 的逆置换，输出 64 bit 密文<br>—mermaid<br>flowchart TD<br>subgraph 明文输入<br>A[64bit 明文]<br>end</p>
+<p>subgraph 加密主链路<br>B[初始置换 IP]<br>C[第 1 轮 Feistel 迭代]<br>D[“… 共 16 轮迭代 …”]<br>E[第 16 轮 Feistel 迭代]<br>F[左右两半交换]<br>G[逆初始置换 IP⁻¹]<br>end</p>
+<p>subgraph 密钥扩展链路<br>K0[64bit 原始密钥]<br>K1[置换选择 PC-1\n剔除8位校验位 → 56bit]<br>K2[逐轮左循环移位 + PC-2 压缩]<br>K3[生成 16 组 48bit 子密钥 K₁~K₁₆]<br>end</p>
+<p>subgraph 密文输出<br>H[64bit 密文]<br>end</p>
+<p>A –&gt; B –&gt; C –&gt; D –&gt; E –&gt; F –&gt; G –&gt; H<br>K0 –&gt; K1 –&gt; K2 –&gt; K3<br>K3 –&gt;|按轮输入子密钥| C<br>K3 –&gt;|按轮输入子密钥| E</p>
+</li>
 </ol>
+<hr>
 <hr>
 <h2 id="三、Feistel-轮运算"><a href="#三、Feistel-轮运算" class="headerlink" title="三、Feistel 轮运算"></a>三、Feistel 轮运算</h2><h3 id="1-核心公式"><a href="#1-核心公式" class="headerlink" title="1. 核心公式"></a>1. 核心公式</h3><p>$$<br>\begin{align*}<br>L_i &amp;&#x3D; R_{i-1} \<br>R_i &amp;&#x3D; L_{i-1} \oplus F(R_{i-1},\ K_i)<br>\end{align*}<br>$$</p>
 <ul>
@@ -719,6 +728,25 @@
         $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
 
         
+        
+        /* 渲染*/
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
+        if (window.mermaid){
+            window.mermaid = null
+        }
+        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
+            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+            if (window.mermaid) {
+                mermaid.initialize(mermaidOptions)
+                mermaid.contentLoaded()
+            }
+        })
         
     }
 
