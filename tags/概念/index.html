@@ -549,16 +549,26 @@
             temp = null;
             return output;
         }
-        if (window.mermaid){
-            window.mermaid = null
+        //310-311、323-329被312-322替换        // if (window.mermaid){
+        //     window.mermaid = null
+        var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+        if (window.mermaid) {
+            mermaid.init(mermaidOptions, '.mermaid')
+        } else {
+            $.getScript("//cdn.bootcdn.net/ajax/libs/mermaid/8.4.2/mermaid.min.js", function () {
+                if (window.mermaid) {
+                    mermaid.initialize(mermaidOptions)
+                    mermaid.init(mermaidOptions, '.mermaid')
+                }
+            })
         }
-        $.getScript("//cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js", function () {
-            var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
-            if (window.mermaid) {
-                mermaid.initialize(mermaidOptions)
-                mermaid.contentLoaded()
-            }
-        })
+        // $.getScript("//cdn.bootcdn.net/ajax/libs/mermaid/8.4.2/mermaid.min.js", function () {
+        //     var mermaidOptions = JSON.parse(HTMLDecode("{&#34;theme&#34;:&#34;default&#34;,&#34;startOnLoad&#34;:true,&#34;flowchart&#34;:{&#34;useMaxWidth&#34;:false,&#34;htmlLabels&#34;:true}}"))
+        //     if (window.mermaid) {
+        //         mermaid.initialize(mermaidOptions)
+        //         mermaid.contentLoaded()
+        //     }
+        // })
         
     }
 

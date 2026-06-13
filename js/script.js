@@ -610,6 +610,12 @@ function bind() {
     if ($('#theme_highlight_on').val() === 'true') {
         $('pre code').each(function (i, block) {
             var codeClass = $(this).attr('class') || ''
+            if (codeClass.indexOf('mermaid') !== -1) {
+                $(this).parent('pre').addClass('mermaid')
+                var mermaidSrc = $(this).text()
+                $(this).parent('pre').replaceWith('<pre class="mermaid">' + mermaidSrc + '</pre>')
+                return
+            }
             var hasCopy = $('#theme_code_copy').val() !== 'false'
             // 添加复制功能
             $(this).after('<div class="code-embed"><span class="code-embed-type">'+ (codeClass.indexOf('hljs') === -1 ? codeClass : codeClass.indexOf('hljs') === 0 ? '' : codeClass.replace(/[\s]?hljs/g, ''))+'</span>'+(hasCopy ? '<span class="code-embed-copy" onclick="copyCode(this)">复制代码</span>' : '')+'</div>')
